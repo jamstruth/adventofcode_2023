@@ -18,8 +18,8 @@ class Calculator:
                 total = total + self.calculate_line(line)
         return total
     
-    DIGITS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-    DIGIT_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+    DIGITS = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+    DIGIT_WORDS = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
     ALL_DIGITS = DIGITS + DIGIT_WORDS
     
     DIGIT_WORDS_REGEX = '|'.join(DIGIT_WORDS)
@@ -64,7 +64,7 @@ class Calculator:
     def get_numeric_string(self, number_string):
         if number_string.isnumeric():
             return number_string
-        return str(self.DIGIT_WORDS.index(number_string))
+        return str(self.DIGIT_WORDS.index(number_string)+1)
         
         
     
